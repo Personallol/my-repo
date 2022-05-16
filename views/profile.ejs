@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="RMY7Y4Dx_xSTIN4ieo1tgQuxBhkOzMBBrWtJ8nZ6Ly0" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGDM35QC91">
+		window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-RGDM35QC91');
+	</script>
+  <title>Test</title>
+  <link rel="icon" href="favicon.jpg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- Modal -->
+<div class="modal fade text-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Title</h5>
+		</div>
+		<div class="modal-body">
+		  <p>Welcome</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+	<div class="bg-dark box-user p-3 rounded mt-5" data-aos="fade-up">
+		<h3>Hello, <%= user.username %>#<%= user.discriminator %></h3>
+		<img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>" style="width: 50px;" alt="">
+		<a style="margin-left: 10px;" href="/logout" class="btn btn-danger">Logout</a>
+		<a style="margin-left: 10px;" href="/" class="btn btn-primary">Home</a>
+	</div>
+
+  <h4 style="margin: 10px;">Guild All</h4>
+  <% guilds.forEach((guild) => { %>
+    <div class="m-5 bg-dark box-user p-3 rounded mt-2" data-aos="fade-up">
+      <p style="font-size: 20px;">Name: <%= guild.name %></p>
+      <img class="rounded" src="https://cdn.discordapp.com/icons/<%= guild.id %>/<%= guild.icon %>" style="width: 50px;" alt="Can't not find guild icon">
+      <a href="https://discord.com/channels/<%= guild.id %>" class="btn btn-primary m-2" target="_blank">Link</a>
+      <br>
+      <p style="margin: 0; margin-top: 5px;">Id: <%= guild.id %></p>
+    </div>
+  <% }) %>
+
+    <div class="m-2"></div>
+</body>
+<script>
+	$(window).on('load', function() {
+        $('#exampleModal').modal('show');
+    });
+
+  AOS.init();
+</script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+  *{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  body {
+    /* margin-top: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Be Vietnam Pro';
+    background-color:#424549;
+    /* background: url('https://cdn.discordapp.com/attachments/948472290583146496/965222342919852093/IMG_1149.jpg') no-repeat center center; */
+    position: relative;
+    transition: all 0.5s ease-in-out;
+	  color: white;
+  }
+</style>
+</html>

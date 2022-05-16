@@ -1,0 +1,106 @@
+<head>
+	<meta name="google-site-verification" content="RMY7Y4Dx_xSTIN4ieo1tgQuxBhkOzMBBrWtJ8nZ6Ly0" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGDM35QC91">
+		window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-RGDM35QC91');
+	</script>
+	<title>Home</title>
+	<link rel="icon" href="favicon.jpg">
+
+	<!-- Meta tags -->
+	<!-- Primary Meta Tags -->
+	<meta name="title" content="How are you?">
+	<meta name="description" content="My website">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://pungpound.xyz/">
+	<meta property="og:title" content="How are you?">
+	<meta property="og:description" content="My website">
+	<meta property="og:image" content="https://pungpound.xyz/chicken.PNG">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://pungpound.xyz/">
+	<meta property="twitter:title" content="How are you?">
+	<meta property="twitter:description" content="My website">
+	<meta property="twitter:image" content="https://pungpound.xyz/chicken.PNG">
+
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+	<div class="container-fluid p-5 bg-warning text-black text-center">
+		<h1 style="font-size: 60px;">How are you?</h1>
+		<p style="font-size: 30px;"></p> 
+		<% if(user) { %>
+			<img onclick="imageclicker()" src="<%= user.picture %>" alt="Not found" style="height: 40px; border-radius: 10%; cursor: pointer;">
+		<% }else { %>
+			<a class="loginbtn btn btn-dark" href="/googlelol">Login</a>
+			<% }%>
+		</div>
+		
+	  <div class="idk container mt-5">
+		<div class="row">
+		  <div class="col-sm-4">
+			<h3>About</h3>
+			<a style="font-size: 25px;" class="btn btn-primary" href="/about">Read</a>
+		  </div>
+		  <div style="height: 10px;" class="col-sm-4">
+			  <h3>Sidebar</h3>
+			  <a style="font-size: 20px;" class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#sidebar" href="/">Sidebar</a>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="sidebar offcanvas offcanvas-start" id="sidebar" style="font-size: 25px;">
+		<div class="offcanvas-header">
+		  <h1 class="offcanvas-title">Title</h1>
+		  <button style="color: white; font-size: 30px;" type="button" class="btn" data-bs-dismiss="offcanvas">X</button>
+		</div>
+		<div class="offcanvas-body">
+		  <p>Text</p>
+		</div>
+	  </div>
+</body>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+	body {
+		font-family: 'Be Vietnam Pro';
+		color: white;
+		width: 100%;
+		height: 100%;
+		font-size: 40px;
+		background-color: #3D3D3D;
+	}
+	a{
+		text-decoration: none;
+		font-size: 45px;
+	}
+	.sidebar {
+		background-color: #3D3D3D;
+	}
+	@media screen and (max-width: 600px) {
+		body {
+			font-size: 30px;
+		}
+		.loginbtn {
+				font-size: 25px;
+			}
+	}
+</style>
+<script>
+	 window.location.replace('https://youtu.be/MSfD-QApDyU?t=145');
+	function imageclicker() {
+		window.location.replace('/profile');
+	}
+</script>

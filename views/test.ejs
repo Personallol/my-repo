@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="RMY7Y4Dx_xSTIN4ieo1tgQuxBhkOzMBBrWtJ8nZ6Ly0" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGDM35QC91">
+		window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-RGDM35QC91');
+	</script>
+  <title>Test</title>
+  <link rel="icon" href="favicon.jpg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- <div class="box">
+    <div class="container">
+      <p>Hello, World</p>
+      <a href="/">Subscribe</a>
+    </div>
+  </div> -->
+  <%- include('./navbar.ejs') %>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">lol</a> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="https://status.pungpound.xyz">Status</a>
+        <a class="nav-link" href="https://docs.pungpound.xyz">Docs</a>
+        <% if(user) { %>
+          <a href="/profile">
+            <img src="<%= user.picture %>" width="40px" height="40px" style="margin-left: 30px; margin-top: 10px;" alt="">
+          </a>
+          <% }else { %>
+            <a class="btnLogin" href="/auth">Login</a>
+            <% }%>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+      <div style="margin-top: 15vh;" class="animatelol">
+        <p class="typing">Hello!</p>
+        <img src="https://i.giphy.com/media/jJjb9AUHOiP3nJJMdy/200w.gif" width="100px" height="60px" alt="">
+  
+      <div class="footertext">
+              <p>&copy Copyright</p>
+      </div>
+
+</body>
+<script>
+  AOS.init();
+</script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+  *{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  body {
+    /* margin-top: 20%; */
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Be Vietnam Pro';
+    background-color:#424549; 
+    /* background: url('https://cdn.discordapp.com/attachments/948472290583146496/965222342919852093/IMG_1149.jpg') no-repeat center center; */
+     position: relative;
+    transition: all 0.5s ease-in-out; 
+  }
+  .typing {
+    font-size: 25px;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid black;
+    animation: type 3s steps(40) infinite;
+    width: 0ch;
+  }
+  @keyframes type {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 5ch;
+    }
+  }
+  /* .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  } */
+  .box {
+    background-color: #3D3D3D;
+    width: 20ch;
+    padding: 0.7rem;
+    color: white;
+    border-radius: 5%;
+  }
+  .box .container{
+    margin: 4px;
+  }
+  .box .container a{
+    text-decoration: none;
+    color: orange;
+    margin-left: 6px;
+  }
+  .sidebar {
+    color: white;
+    background-color: #3D3D3D;
+  }
+  .animatelol {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    border-radius: 5%;
+  }
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  .animatelol p, .animatelol a {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+  }
+  .animatelol img {
+    border-radius: 5%;
+  }
+  .btnLogin {
+    margin-left: 15px;
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+  }
+  /* .btnLogin:hover {
+    color: black;
+    margin: 10px;
+    background-color: chartreuse;
+    padding: 0.1rem;
+    border-radius: 5%;
+  } */
+</style>
+</html>

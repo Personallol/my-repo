@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="loader-container">
+        <p class="text-white" style="margin-top: 10vh;">Loading...</p>
+    </div>
+
+    <h2 class="title">How to create web with express.js</h2>    
+     <div class="content">
+         <p>Content</p>
+         <p>Image: </p>
+         <img src="https://pungpound.xyz/favicon.jpg" width="50" alt="">
+         <p>End</p>
+     </div>
+      <a href="/" class="gohome btn btn-dark">Home</a>
+</body>
+<script>
+    $(window).on('load', function() {
+    $('.loader-container').fadeOut(2000);
+  });
+</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+    body {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Be Vietnam Pro';
+        background-color: 	#424549;
+        color: white;
+        transition: all 1s ease-in-out;
+    }
+    .loader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #36393e;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gohome {
+      margin-right: 25px;
+  }
+  @media screen and (max-width: 600px) {
+      h2 {
+          font-size: 20px;
+      }
+  }
+</style>
+</html>

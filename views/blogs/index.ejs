@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="icon" href="/favicon.jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2 class="title">Hello</h2>    
+    <div class="container">
+        <div class="row">
+          <div class="col-6 col-sm-4">
+              <p>How to create web with express.js</p>
+              <a href="/blog/how-to-create-web" class="btn btn-primary">Read</a>
+          </div>
+          <div class="col-6 col-sm-4">
+              <p>Title</p>
+              <a href="https://google.com" class="btn btn-primary">Read</a>
+          </div>
+          <div class="fix-bug fix-again col-6 col-sm-4">
+              <p>Title</p>
+              <a href="https://google.com" class="btn btn-primary">Read</a>
+          </div>
+          <div class="fix-bug col-6 col-sm-4">
+              <p>Title</p>
+              <a href="https://google.com" class="btn btn-primary">Read</a>
+          </div>
+        </div>
+      </div>
+      <a href="/" class="gohome btn btn-dark">Home</a>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+
+    body {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Be Vietnam Pro';
+        background-color: 	#424549;
+        color: white;
+        transition: all 1s ease-in-out;
+    }
+    .container .row {
+        margin-top: 25px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .fix-bug {
+        margin-top: 25px;
+    }
+    .fix-again {
+        margin: 0;
+    }
+    .gohome {
+        margin-top: 10vh;
+    }
+    @media screen and (max-width: 600px){
+        .container {
+            margin-top: 5ch;
+            margin-left: 11vh;
+        }
+        .title {
+            margin-left: 5vh;
+        }
+        .container .row {
+            margin-top: 0;
+        }
+        .container .row div {
+            font-size: 25px;
+        }
+        .container .row div a {
+            font-size: 16px;
+        }
+        .fix-again {
+            margin-top: 25px;
+        }
+        .gohome {
+            font-size: 20px;
+            /* margin-left: 5ch; */
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+</style>
+</html>

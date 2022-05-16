@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg" data-aos="fade-up">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="color: white;" href="#">lol</a>
+      <!-- <img src="/chicken.PNG" class="navbar-brand" width="32px" height="32px" alt=""> -->
+      <button class="navbar-toggler" type="button" style="color: white;" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span style="color: white;">:</span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-right: 40px;">
+        <div class="navbar-nav">
+          <a class="nav-link active" style="color: white;" aria-current="page" href="#">Home</a>
+          <a class="nav-link" style="color: white;" href="https://uptime.pungpound.xyz">Uptime</a>
+          <a class="nav-link" style="color: white;" href="https://docs.pungpound.xyz">Docs</a>
+          <a class="nav-link" style="color: white;" href="https://api.pungpound.xyz">Api</a>
+	  <a class="nav-link" style="color: white;" href="/blog">Blog</a>	
+          <% if(user) { %>
+            <!-- <a class="btnLogin" style="color: white;" href="/profile">Profile</a> -->
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <%= user.username %>
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                <li><a class="dropdown-item" style="color: #F9B13C;" href="/logout">Logout</a></li>
+              </ul>
+            </div>
+            <% }else { %>
+              <!-- <a class="btnLogin" style="color: white;" href="/auth">Login</a> -->
+              <a class="btnLogin" style="color: white; cursor: pointer;" target="popup" onclick="clicklol()">Login</a>
+              <% }%>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function clicklol() {
+      window.open('https://discord.com/oauth2/authorize?client_id=955323669834526751&redirect_uri=https%3A%2F%2Fpungpound.xyz%2Fauth%2Fcallback&response_type=code&scope=identify&prompt=none','name','width=600,height=700');
+       }
+  </script>
+  <style>
+      .navbar {
+          background-color: #282b30;
+          position: absolute;
+          top: 0;
+          width: 100%;
+      }
+     .dropdown {
+        position: absolute;
+        right: 10%;
+     }
+     .btnLogin {
+        position: absolute;
+        right: 10%;
+     }
+     @media screen and (max-width: 700px) {
+      .dropdown {
+          position: absolute;
+          top: 40%;
+          margin-left: 40px;
+      }
+      .btnLogin {
+          position: absolute;
+          top: 50%;
+          margin-right: 25px;
+      }
+      .navbar .container-fluid .navbar-brand {
+        margin-right: 10px;
+      }
+     }
+  </style>
